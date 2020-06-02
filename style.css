@@ -69,8 +69,6 @@ body {
 .site-nav {
   display: flex;
   padding: 0;
-  padding-top: 32px;
-  padding-bottom: 32px;
 }
 
 .site-nav .item + .item {
@@ -80,6 +78,24 @@ body {
 .site-nav .link {
   color: var(--second-color);
   text-decoration: none;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .item {
+  position: relative;
+}
+
+.site-nav .curent::after {
+  content: '';
+  border-radius: 2px;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--akcent-color);
 }
 
 .info-title a {
@@ -337,6 +353,14 @@ body {
   text-align: center;
   padding-top: 0;
   padding: 27px 82px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.cotainer-applications .item {
+  position: relative;
 }
 
 /* team */
@@ -375,6 +399,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
   margin-top: 30px;
+  color: #212121;
 }
 
 .subtitle {
@@ -423,16 +448,12 @@ body {
 .team-link:hover,
 .team-link:focus {
   background-color: #2196f3;
+  --color4: white;
 }
 
 .icon-team {
   width: 20px;
   height: 20px;
-}
-
-.icon-team:hover,
-.icon-team:focus {
-  --color4: white;
 }
 
 /* Regular customers */
@@ -476,7 +497,37 @@ body {
   border: 1px solid var(--akcent-color);
 }
 
-.icon-brand:hover {
+.icon-yoco {
+  width: 44px;
+  height: 49px;
+}
+
+.icon-tagline {
+  width: 40px;
+  height: 52px;
+}
+
+.icon-company {
+  width: 41px;
+  height: 42px;
+}
+
+.icon-foster {
+  width: 79px;
+  height: 42px;
+}
+
+.icon-brand {
+  width: 59px;
+  height: 47px;
+}
+
+.icon-tag {
+  width: 88px;
+  height: 45px;
+}
+
+.regular .link:hover {
   --color4: #2196f3;
 }
 
@@ -636,6 +687,11 @@ body {
     0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
+.button-portfolio:hover {
+  background-color: var(--akcent-color);
+  color: white;
+}
+
 .button-item + .button-item {
   margin-left: 8px;
 }
@@ -654,6 +710,11 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.decoration-list .item:hover {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .decoration-list li:nth-child(3n + 4) {
@@ -692,7 +753,7 @@ body {
   color: var(--second-color);
   margin: 0;
   margin-bottom: 4px;
-  padding-top: 20px;
+  margin-top: 20px;
 }
 
 .p-title {
