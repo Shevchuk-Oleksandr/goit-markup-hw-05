@@ -122,7 +122,8 @@ body {
   fill: currentColor;
 }
 
-.info-title .link:hover {
+.info-title .link:hover,
+.info-title .link:focus {
   color: var(--akcent-color);
   --color3: var(--akcent-color);
 }
