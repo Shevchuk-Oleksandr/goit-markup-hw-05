@@ -763,8 +763,7 @@ body {
     0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
-.decoration-list .item:hover .decoration-text,
-.decoration-list .item:focus .decoration-text {
+.decoration-list .item:hover .decoration-list .item:focus {
   transform: translateY(0);
 }
 
